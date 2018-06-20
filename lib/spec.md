@@ -33,6 +33,7 @@ expense.amount
 municipal_budget = MunicipalBudget.new
 municipal_budget.expenses
 #=> []
+
 Iteration 3
 Writing your own tests to drive development, create the functionality for the MunicipalBudget class described below.
 
