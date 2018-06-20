@@ -61,6 +61,7 @@ municipal_budget.departments
 
 municipal_budget.budget_categories
 #=> [<BudgetCategory...>, <BudgetCategory...>]
+
 Iteration 4
 Writing your own tests to drive development, add the following features to MunicipalBudget.
 
