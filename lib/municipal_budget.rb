@@ -1,4 +1,5 @@
 require 'pry'
+require './lib/budget_category'
 
 class MunicipalBudget
 
@@ -20,7 +21,22 @@ class MunicipalBudget
     add_expense(expense)
     expense.department.expenses << expense
     @departments << expense.department
-    @budget_categories << expense.budget_category 
+    @budget_categories << expense.budget_category
+  end
+
+  def total_expenses
+    @total = 0
+    @expenses.each do |expense|
+      @total += expense.amount
+    end
+    return @total
+  end
+
+  def alphabetical_budget_categories
+    @budget_category_names = @budget_categories.map do |object|
+      object.name
+    end
+    @budget_category_names.sort#_by {|each| each.name}
   end
 
 end
